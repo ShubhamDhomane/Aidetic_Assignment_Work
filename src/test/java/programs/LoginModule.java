@@ -50,7 +50,7 @@ public class LoginModule {
 		WebElement other = driver.findElement(By.xpath("//p[text()='Other']"));
 		ac.moveToElement(other).click().build().perform();		
 				
-	    driver.findElement(By.xpath("(//input[@type='text'])[1]")).sendKeys("Shubham");
+	        driver.findElement(By.xpath("(//input[@type='text'])[1]")).sendKeys("Shubham");
 		driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Dhomane");
 		driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("dhomaneshubham1@gamil.com");
 		driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
@@ -73,10 +73,10 @@ public class LoginModule {
 //		driver.findElement(By.xpath("//span[text()='Next']")).click();
 //		
 		
-		driver.get("https://auth.dev.vntech.io/email/verify+set+password/email=dhomaneshubham1@gmail.com&uid=73973&fname=Shubham&lname=Dhomane&key=71edf926586aa3ef91657c816e54990d2c6e6a6304d8b35c4789efa7de48bc7e&platform=Secure");
+	driver.get("https://auth.dev.vntech.io/email/verify+set+password/email=dhomaneshubham1@gmail.com&uid=73973&fname=Shubham&lname=Dhomane&key=71edf926586aa3ef91657c816e54990d2c6e6a6304d8b35c4789efa7de48bc7e&platform=Secure");
        	driver.findElement(By.xpath("(//button[contains(text(),'Accept All')])[1]")).click();
-       	driver.findElement(By.xpath("(//input[@type='password'])[1]")).sendKeys("Shubham@4");
-       	driver.findElement(By.xpath("(//input[@type='password'])[2]")).sendKeys("Shubham@4");
+       	driver.findElement(By.xpath("(//input[@type='password'])[1]")).sendKeys("********");
+       	driver.findElement(By.xpath("(//input[@type='password'])[2]")).sendKeys("********");
        	driver.findElement(By.xpath("//button[contains(text(),'Continue')]")).click();
        	
 	}
@@ -91,7 +91,7 @@ public class LoginModule {
 
 		driver.findElement(By.xpath("//p[text()='Other']")).click();	
 		driver.findElement(By.id("email")).sendKeys("dhomaneshubham1@gmail.com");
-		driver.findElement(By.id("password")).sendKeys("Shubham@4");
+		driver.findElement(By.id("password")).sendKeys("********");
 		driver.findElement(By.id("signin")).click();
 		
 		try {
@@ -108,7 +108,7 @@ public class LoginModule {
 	
 	@AfterMethod
 	public void tearDown() {
-		//driver.close();
+		driver.close();
 	}
 	
 	
